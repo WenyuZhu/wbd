@@ -13,7 +13,7 @@ class Angle():
     
     def setDegrees(self, degrees):
         if not (isinstance(degrees, int) or isinstance(degrees, float)):
-            raise ValueError('Value is not integer or float, please retry')
+            raise ValueError('Angle,setDgree:  Value is not integer or float, please retry')
         if degrees < 0 :
             degrees = -degrees
             degrees = degrees % 360
@@ -29,23 +29,23 @@ class Angle():
         for index in range(len(degrees)):
             if degrees[index] == 'd':
                 if index == 0 :
-                    raise ValueError('degree portion is needed')
+                    raise ValueError('Angle,setDegreesAndMinutes:  degree portion is needed')
                 if index == len(degrees) - 1:
-                    raise ValueError('minute portion is needed')
+                    raise ValueError('Angle,setDegreesAndMinutes:  minute portion is needed')
                 temp = degrees[ :index]
                 try:
                     a = int(temp)
                 except:
-                    raise ValueError('degree portion has to be integer')
+                    raise ValueError('Angle,setDegreesAndMinutes:  degree portion has to be integer')
                 dec = degrees[index + 1:]
                 try:
                     b = float(dec)
                 except:
-                    raise ValueError('minute portion has to integer or float')
+                    raise ValueError('Angle,setDegreesAndMinutes:  minute portion has to integer or float')
                 if b < 0:
-                    raise ValueError('minute portion has to be a positive number')
+                    raise ValueError('Angle,setDegreesAndMinutes:  minute portion has to be a positive number')
             if index == len(degrees) - 1 and not degrees[index] == 'd':
-                raise ValueError('the separator d is not found')
+                raise ValueError('Angle,setDegreesAndMinutes:  the separator d is not found')
         carrier = int(b / 60)
         b = b % 60
         b = b / 60 + carrier
@@ -71,7 +71,7 @@ class Angle():
     
     def add(self, angle):
         if not isinstance(angle, Angle):
-            raise ValueError('angle is not a instance of Angle')
+            raise ValueError('Angle, add:  angle is not a instance of Angle')
         angleOut = angle.getDegrees()
         res = self.angle_value + angleOut
         if res < 0:
@@ -86,7 +86,7 @@ class Angle():
     
     def subtract(self, angle):
         if not isinstance(angle, Angle):
-            raise ValueError('angle is not a instance of Angle')
+            raise ValueError('Angle, subtract:  angle is not a instance of Angle')
         angleOut = angle.getDegrees()
         res = self.angle_value - angleOut
         if res < 0:
@@ -101,7 +101,7 @@ class Angle():
     
     def compare(self, angle):
         if not isinstance(angle, Angle):
-            raise ValueError('angle is not a instance of Angle')
+            raise ValueError('Angle,compare:  angle is not a instance of Angle')
         angleOut = angle.getDegrees()
         if self.angle_value > angleOut:
             return 1
