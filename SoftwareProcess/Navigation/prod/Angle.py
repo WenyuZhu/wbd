@@ -129,7 +129,7 @@ class Angle():
         anglenum = self.angle_value
         num = int(anglenum / 1)
         dec = anglenum - num
-        dec = round(dec * 60, 1)
+        dec = dec * 60
         res = str(num) + 'd' + str(dec)
         return res
         pass
