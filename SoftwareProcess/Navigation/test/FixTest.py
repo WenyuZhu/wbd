@@ -101,12 +101,7 @@ class FixTest(unittest.TestCase):
 #Happy path
     def test200_010_ShouldReturnTrue(self):
         fix=Fix.Fix()
-        self.assertTrue(fix.setSightingFile('stars.xml'))
-        
-    def test200_020_ShouldReturnFalse(self):
-        fix=Fix.Fix()
-        self.assertTrue(fix.setSightingFile('stars.xml'))
-        self.assertFalse(fix.setSightingFile('stars.xml'))
+        self.assertEqual(fix.setSightingFile('stars.xml'),'stars.xml')
         
 # Acceptance test:300
 #    Analysis - getSightings
@@ -198,7 +193,15 @@ class FixTest(unittest.TestCase):
         fix.setSightingFile('testhorzboundarystars.xml') #'boundarylimitstars.xml is a xml file with no mandatory tag'
         with self.assertRaises(ValueError) as context:
             fix.getSightings()
-        self.assertEquals(expectedDiag, context.exception.args[0][0:len(expectedDiag)])         
+        self.assertEquals(expectedDiag, context.exception.args[0][0:len(expectedDiag)])    
+        
+    def test300_099_ShouldRaiseValueError(self):
+        expectedDiag = self.className + "getSightings:"
+        fix=Fix.Fix()
+        fix.setSightingFile('wrongtimestars.xml') #'boundarylimitstars.xml is a xml file with no mandatory tag'
+        with self.assertRaises(ValueError) as context:
+            fix.getSightings()
+        self.assertEquals(expectedDiag, context.exception.args[0][0:len(expectedDiag)])             
         
 #        Happy path
     def test300_010_ShouldReturnLatitudeAndLongitude(self):

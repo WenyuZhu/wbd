@@ -658,3 +658,224 @@ LOG: 2016-10-12 19:22:08-06:00 Start of log
 LOG: 2016-10-12 19:22:08-06:00 Start of sighting filetestpresboundarystars.xml
 LOG: 2016-10-12 19:22:08-06:00 Start of log 
 LOG: 2016-10-12 19:22:08-06:00 Start of sighting filetesthorzboundarystars.xml
+LOG: 2016-10-13 17:01:27-06:00 Start of log 
+LOG: 2016-10-13 17:01:27-06:00 Start of log 
+LOG: 2016-10-13 17:01:27-06:00 Start of log 
+LOG: 2016-10-13 17:01:27-06:00 Start of log 
+LOG: 2016-10-13 17:01:27-06:00 Start of log 
+LOG: 2016-10-13 17:01:27-06:00 Start of log 
+LOG: 2016-10-13 17:01:27-06:00 Start of log 
+LOG: 2016-10-13 17:01:27-06:00 Start of log 
+LOG: 2016-10-13 17:01:27-06:00 Start of log 
+LOG: 2016-10-13 17:01:27-06:00 Start of log 
+LOG: 2016-10-13 17:01:27-06:00 Start of log 
+LOG: 2016-10-13 17:01:27-06:00 Start of log 
+LOG: 2016-10-13 17:01:27-06:00 Start of log 
+LOG: 2016-10-13 17:01:27-06:00 Start of log 
+LOG: 2016-10-13 17:01:27-06:00 Start of log 
+LOG: 2016-10-13 17:01:27-06:00 Start of log 
+LOG: 2016-10-13 17:02:23-06:00 Start of log 
+LOG: 2016-10-13 17:02:23-06:00 Start of log 
+LOG: 2016-10-13 17:02:23-06:00 Start of sighting filestars.xml
+LOG: 2016-10-13 17:02:23-06:00 Start of log 
+LOG: 2016-10-13 17:02:23-06:00 Start of log 
+LOG: 2016-10-13 17:02:23-06:00 Start of log 
+LOG: 2016-10-13 17:02:23-06:00 Start of log 
+LOG: 2016-10-13 17:02:23-06:00 Start of sighting fileoptionalmissstars.xml
+LOG: 2016-10-13 17:02:23-06:00 Start of log 
+LOG: 2016-10-13 17:02:23-06:00 Start of sighting filestars.xml
+LOG: 2016-10-13 17:02:23-06:00 Start of log 
+LOG: 2016-10-13 17:02:23-06:00 Start of log 
+LOG: 2016-10-13 17:02:23-06:00 Start of sighting filemandatorymissstars.xml
+LOG: 2016-10-13 17:02:23-06:00 Start of log 
+LOG: 2016-10-13 17:02:23-06:00 Start of sighting fileWrongformatstars.xml
+LOG: 2016-10-13 17:02:23-06:00 Start of log 
+LOG: 2016-10-13 17:02:23-06:00 Start of sighting filelowboundrystar.xml
+LOG: 2016-10-13 17:02:23-06:00 Start of log 
+LOG: 2016-10-13 17:02:23-06:00 Start of sighting fileboundarylimitstars.xml
+LOG: 2016-10-13 17:02:23-06:00 Start of log 
+LOG: 2016-10-13 17:02:23-06:00 Start of sighting filetestheightboundarystars.xml
+LOG: 2016-10-13 17:02:23-06:00 Start of log 
+LOG: 2016-10-13 17:02:23-06:00 Start of sighting filetesttemtboundarystars.xml
+LOG: 2016-10-13 17:02:23-06:00 Start of log 
+LOG: 2016-10-13 17:02:23-06:00 Start of sighting filetestpresboundarystars.xml
+LOG: 2016-10-13 17:02:23-06:00 Start of log 
+LOG: 2016-10-13 17:02:23-06:00 Start of sighting filetesthorzboundarystars.xml
+LOG: 2016-10-13 17:04:38-06:00 Start of log 
+LOG: 2016-10-13 17:04:38-06:00 Start of log 
+LOG: 2016-10-13 17:04:38-06:00 Start of sighting filestars.xml
+LOG: 2016-10-13 17:04:38-06:00 Start of log 
+LOG: 2016-10-13 17:04:38-06:00 Start of log 
+LOG: 2016-10-13 17:04:38-06:00 Start of log 
+LOG: 2016-10-13 17:04:38-06:00 Start of log 
+LOG: 2016-10-13 17:04:38-06:00 Start of sighting fileoptionalmissstars.xml
+LOG: 2016-10-13 17:04:38-06:00	Aldebaran	2016-03-01	23:40:01	15d1.5
+LOG: 2016-10-13 17:04:38-06:00	Peacock	2016-03-02	00:05:05	45d11.9
+LOG: 2016-10-13 17:04:38-06:00 Start of log 
+LOG: 2016-10-13 17:04:38-06:00 Start of sighting filestars.xml
+LOG: 2016-10-13 17:04:38-06:00	Vinny	2016-03-01	02:00:05	15d37.5
+LOG: 2016-10-13 17:04:38-06:00	Aldebaran	2016-03-01	23:40:01	15d1.5
+LOG: 2016-10-13 17:04:38-06:00	Peacock	2016-03-02	00:05:05	45d11.9
+LOG: 2016-10-13 17:04:38-06:00 Start of log 
+LOG: 2016-10-13 17:04:38-06:00 Start of log 
+LOG: 2016-10-13 17:04:38-06:00 Start of sighting filemandatorymissstars.xml
+LOG: 2016-10-13 17:04:38-06:00 Start of log 
+LOG: 2016-10-13 17:04:38-06:00 Start of sighting fileWrongformatstars.xml
+LOG: 2016-10-13 17:04:38-06:00 Start of log 
+LOG: 2016-10-13 17:04:38-06:00 Start of sighting filelowboundrystar.xml
+LOG: 2016-10-13 17:04:38-06:00 Start of log 
+LOG: 2016-10-13 17:04:38-06:00 Start of sighting fileboundarylimitstars.xml
+LOG: 2016-10-13 17:04:38-06:00 Start of log 
+LOG: 2016-10-13 17:04:38-06:00 Start of sighting filetestheightboundarystars.xml
+LOG: 2016-10-13 17:04:38-06:00 Start of log 
+LOG: 2016-10-13 17:04:38-06:00 Start of sighting filetesttemtboundarystars.xml
+LOG: 2016-10-13 17:04:38-06:00 Start of log 
+LOG: 2016-10-13 17:04:38-06:00 Start of sighting filetestpresboundarystars.xml
+LOG: 2016-10-13 17:04:38-06:00 Start of log 
+LOG: 2016-10-13 17:04:38-06:00 Start of sighting filetesthorzboundarystars.xml
+LOG: 2016-10-13 17:05:14-06:00 Start of log 
+LOG: 2016-10-13 17:05:14-06:00 Start of log 
+LOG: 2016-10-13 17:05:14-06:00 Start of sighting filestars.xml
+LOG: 2016-10-13 17:05:14-06:00 Start of log 
+LOG: 2016-10-13 17:05:14-06:00 Start of log 
+LOG: 2016-10-13 17:05:14-06:00 Start of log 
+LOG: 2016-10-13 17:05:14-06:00 Start of log 
+LOG: 2016-10-13 17:05:14-06:00 Start of sighting fileoptionalmissstars.xml
+LOG: 2016-10-13 17:05:14-06:00	Aldebaran	2016-03-01	23:40:01	15d1.5
+LOG: 2016-10-13 17:05:14-06:00	Peacock	2016-03-02	00:05:05	45d11.9
+LOG: 2016-10-13 17:05:14-06:00	End of sighting file:	optionalmissstars.xml
+LOG: 2016-10-13 17:05:14-06:00 Start of log 
+LOG: 2016-10-13 17:05:14-06:00 Start of sighting filestars.xml
+LOG: 2016-10-13 17:05:14-06:00	Vinny	2016-03-01	02:00:05	15d37.5
+LOG: 2016-10-13 17:05:14-06:00	Aldebaran	2016-03-01	23:40:01	15d1.5
+LOG: 2016-10-13 17:05:14-06:00	Peacock	2016-03-02	00:05:05	45d11.9
+LOG: 2016-10-13 17:05:14-06:00	End of sighting file:	stars.xml
+LOG: 2016-10-13 17:05:14-06:00 Start of log 
+LOG: 2016-10-13 17:05:14-06:00 Start of log 
+LOG: 2016-10-13 17:05:14-06:00 Start of sighting filemandatorymissstars.xml
+LOG: 2016-10-13 17:05:14-06:00 Start of log 
+LOG: 2016-10-13 17:05:14-06:00 Start of sighting fileWrongformatstars.xml
+LOG: 2016-10-13 17:05:14-06:00 Start of log 
+LOG: 2016-10-13 17:05:14-06:00 Start of sighting filelowboundrystar.xml
+LOG: 2016-10-13 17:05:14-06:00 Start of log 
+LOG: 2016-10-13 17:05:14-06:00 Start of sighting fileboundarylimitstars.xml
+LOG: 2016-10-13 17:05:14-06:00 Start of log 
+LOG: 2016-10-13 17:05:14-06:00 Start of sighting filetestheightboundarystars.xml
+LOG: 2016-10-13 17:05:14-06:00 Start of log 
+LOG: 2016-10-13 17:05:14-06:00 Start of sighting filetesttemtboundarystars.xml
+LOG: 2016-10-13 17:05:14-06:00 Start of log 
+LOG: 2016-10-13 17:05:14-06:00 Start of sighting filetestpresboundarystars.xml
+LOG: 2016-10-13 17:05:14-06:00 Start of log 
+LOG: 2016-10-13 17:05:14-06:00 Start of sighting filetesthorzboundarystars.xml
+LOG: 2016-10-13 17:24:50-06:00 Start of log 
+LOG: 2016-10-13 17:24:50-06:00 Start of log 
+LOG: 2016-10-13 17:24:50-06:00 Start of sighting filestars.xml
+LOG: 2016-10-13 17:24:50-06:00 Start of log 
+LOG: 2016-10-13 17:24:50-06:00 Start of log 
+LOG: 2016-10-13 17:24:50-06:00 Start of log 
+LOG: 2016-10-13 17:24:50-06:00 Start of log 
+LOG: 2016-10-13 17:24:50-06:00 Start of sighting fileoptionalmissstars.xml
+LOG: 2016-10-13 17:24:50-06:00	Aldebaran	2016-03-01	23:40:01	15d1.5
+LOG: 2016-10-13 17:24:50-06:00	Peacock	2016-03-02	00:05:05	45d11.9
+LOG: 2016-10-13 17:24:50-06:00	End of sighting file:	optionalmissstars.xml
+LOG: 2016-10-13 17:24:50-06:00 Start of log 
+LOG: 2016-10-13 17:24:50-06:00 Start of sighting filestars.xml
+LOG: 2016-10-13 17:24:50-06:00	Vinny	2016-03-01	02:00:05	15d37.5
+LOG: 2016-10-13 17:24:50-06:00	Aldebaran	2016-03-01	23:40:01	15d1.5
+LOG: 2016-10-13 17:24:50-06:00	Peacock	2016-03-02	00:05:05	45d11.9
+LOG: 2016-10-13 17:24:50-06:00	End of sighting file:	stars.xml
+LOG: 2016-10-13 17:24:50-06:00 Start of log 
+LOG: 2016-10-13 17:24:50-06:00 Start of log 
+LOG: 2016-10-13 17:24:50-06:00 Start of sighting filemandatorymissstars.xml
+LOG: 2016-10-13 17:24:50-06:00 Start of log 
+LOG: 2016-10-13 17:24:50-06:00 Start of sighting fileWrongformatstars.xml
+LOG: 2016-10-13 17:24:50-06:00 Start of log 
+LOG: 2016-10-13 17:24:50-06:00 Start of sighting filelowboundrystar.xml
+LOG: 2016-10-13 17:24:50-06:00 Start of log 
+LOG: 2016-10-13 17:24:50-06:00 Start of sighting fileboundarylimitstars.xml
+LOG: 2016-10-13 17:24:50-06:00 Start of log 
+LOG: 2016-10-13 17:24:50-06:00 Start of sighting filetestheightboundarystars.xml
+LOG: 2016-10-13 17:24:50-06:00 Start of log 
+LOG: 2016-10-13 17:24:50-06:00 Start of sighting filetesttemtboundarystars.xml
+LOG: 2016-10-13 17:24:50-06:00 Start of log 
+LOG: 2016-10-13 17:24:50-06:00 Start of sighting filetestpresboundarystars.xml
+LOG: 2016-10-13 17:24:50-06:00 Start of log 
+LOG: 2016-10-13 17:24:50-06:00 Start of sighting filetesthorzboundarystars.xml
+LOG: 2016-10-13 17:24:50-06:00 Start of log 
+LOG: 2016-10-13 17:24:50-06:00 Start of sighting filewrongtimestars.xml
+LOG: 2016-10-13 17:25:26-06:00 Start of log 
+LOG: 2016-10-13 17:25:26-06:00 Start of log 
+LOG: 2016-10-13 17:25:26-06:00 Start of sighting filestars.xml
+LOG: 2016-10-13 17:25:26-06:00 Start of log 
+LOG: 2016-10-13 17:25:26-06:00 Start of log 
+LOG: 2016-10-13 17:25:26-06:00 Start of log 
+LOG: 2016-10-13 17:25:26-06:00 Start of log 
+LOG: 2016-10-13 17:25:26-06:00 Start of sighting fileoptionalmissstars.xml
+LOG: 2016-10-13 17:25:26-06:00	Aldebaran	2016-03-01	23:40:01	15d1.5
+LOG: 2016-10-13 17:25:26-06:00	Peacock	2016-03-02	00:05:05	45d11.9
+LOG: 2016-10-13 17:25:26-06:00	End of sighting file:	optionalmissstars.xml
+LOG: 2016-10-13 17:25:26-06:00 Start of log 
+LOG: 2016-10-13 17:25:26-06:00 Start of sighting filestars.xml
+LOG: 2016-10-13 17:25:26-06:00	Vinny	2016-03-01	02:00:05	15d37.5
+LOG: 2016-10-13 17:25:26-06:00	Aldebaran	2016-03-01	23:40:01	15d1.5
+LOG: 2016-10-13 17:25:26-06:00	Peacock	2016-03-02	00:05:05	45d11.9
+LOG: 2016-10-13 17:25:26-06:00	End of sighting file:	stars.xml
+LOG: 2016-10-13 17:25:26-06:00 Start of log 
+LOG: 2016-10-13 17:25:26-06:00 Start of log 
+LOG: 2016-10-13 17:25:26-06:00 Start of sighting filemandatorymissstars.xml
+LOG: 2016-10-13 17:25:26-06:00 Start of log 
+LOG: 2016-10-13 17:25:26-06:00 Start of sighting fileWrongformatstars.xml
+LOG: 2016-10-13 17:25:26-06:00 Start of log 
+LOG: 2016-10-13 17:25:26-06:00 Start of sighting filelowboundrystar.xml
+LOG: 2016-10-13 17:25:26-06:00 Start of log 
+LOG: 2016-10-13 17:25:26-06:00 Start of sighting fileboundarylimitstars.xml
+LOG: 2016-10-13 17:25:26-06:00 Start of log 
+LOG: 2016-10-13 17:25:26-06:00 Start of sighting filetestheightboundarystars.xml
+LOG: 2016-10-13 17:25:26-06:00 Start of log 
+LOG: 2016-10-13 17:25:26-06:00 Start of sighting filetesttemtboundarystars.xml
+LOG: 2016-10-13 17:25:26-06:00 Start of log 
+LOG: 2016-10-13 17:25:26-06:00 Start of sighting filetestpresboundarystars.xml
+LOG: 2016-10-13 17:25:26-06:00 Start of log 
+LOG: 2016-10-13 17:25:26-06:00 Start of sighting filetesthorzboundarystars.xml
+LOG: 2016-10-13 17:25:26-06:00 Start of log 
+LOG: 2016-10-13 17:25:26-06:00 Start of sighting filewrongtimestars.xml
+LOG: 2016-10-13 17:25:26-06:00	Vinny	2016-03-01	02:00:05	15d37.5
+LOG: 2016-10-13 17:25:26-06:00	Aldebaran	2016-03-01	26:80:01	15d1.5
+LOG: 2016-10-13 17:25:26-06:00	Peacock	2016-03-02	00:05:05	45d11.9
+LOG: 2016-10-13 17:25:26-06:00	End of sighting file:	wrongtimestars.xml
+LOG: 2016-10-13 17:25:37-06:00 Start of log 
+LOG: 2016-10-13 17:25:37-06:00 Start of log 
+LOG: 2016-10-13 17:25:37-06:00 Start of sighting filestars.xml
+LOG: 2016-10-13 17:25:37-06:00 Start of log 
+LOG: 2016-10-13 17:25:37-06:00 Start of log 
+LOG: 2016-10-13 17:25:37-06:00 Start of log 
+LOG: 2016-10-13 17:25:37-06:00 Start of log 
+LOG: 2016-10-13 17:25:37-06:00 Start of sighting fileoptionalmissstars.xml
+LOG: 2016-10-13 17:25:37-06:00	Aldebaran	2016-03-01	23:40:01	15d1.5
+LOG: 2016-10-13 17:25:37-06:00	Peacock	2016-03-02	00:05:05	45d11.9
+LOG: 2016-10-13 17:25:37-06:00	End of sighting file:	optionalmissstars.xml
+LOG: 2016-10-13 17:25:37-06:00 Start of log 
+LOG: 2016-10-13 17:25:37-06:00 Start of sighting filestars.xml
+LOG: 2016-10-13 17:25:37-06:00	Vinny	2016-03-01	02:00:05	15d37.5
+LOG: 2016-10-13 17:25:37-06:00	Aldebaran	2016-03-01	23:40:01	15d1.5
+LOG: 2016-10-13 17:25:37-06:00	Peacock	2016-03-02	00:05:05	45d11.9
+LOG: 2016-10-13 17:25:37-06:00	End of sighting file:	stars.xml
+LOG: 2016-10-13 17:25:37-06:00 Start of log 
+LOG: 2016-10-13 17:25:37-06:00 Start of log 
+LOG: 2016-10-13 17:25:37-06:00 Start of sighting filemandatorymissstars.xml
+LOG: 2016-10-13 17:25:37-06:00 Start of log 
+LOG: 2016-10-13 17:25:37-06:00 Start of sighting fileWrongformatstars.xml
+LOG: 2016-10-13 17:25:37-06:00 Start of log 
+LOG: 2016-10-13 17:25:37-06:00 Start of sighting filelowboundrystar.xml
+LOG: 2016-10-13 17:25:37-06:00 Start of log 
+LOG: 2016-10-13 17:25:37-06:00 Start of sighting fileboundarylimitstars.xml
+LOG: 2016-10-13 17:25:37-06:00 Start of log 
+LOG: 2016-10-13 17:25:37-06:00 Start of sighting filetestheightboundarystars.xml
+LOG: 2016-10-13 17:25:37-06:00 Start of log 
+LOG: 2016-10-13 17:25:37-06:00 Start of sighting filetesttemtboundarystars.xml
+LOG: 2016-10-13 17:25:37-06:00 Start of log 
+LOG: 2016-10-13 17:25:37-06:00 Start of sighting filetestpresboundarystars.xml
+LOG: 2016-10-13 17:25:37-06:00 Start of log 
+LOG: 2016-10-13 17:25:37-06:00 Start of sighting filetesthorzboundarystars.xml
+LOG: 2016-10-13 17:25:37-06:00 Start of log 
+LOG: 2016-10-13 17:25:37-06:00 Start of sighting filewrongtimestars.xml

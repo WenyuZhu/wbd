@@ -20,7 +20,7 @@ class Fix():
         '''
         Constructor
         '''
-        if not isinstance(logFile, str):
+        if (not isinstance(logFile, str)) or len(logFile)==0:
             raise ValueError('Fix._init_: input has to be string')
         name=logFile+'.txt'
         try:
@@ -30,11 +30,11 @@ class Fix():
         now_time=self.gettime()
         file.write(now_time+' Start of log \n')
         self.file=file
-        self.xmlFileList=list()
+        self.sightingFile=''
         self.sightingList=list()
             
     def setSightingFile(self, sightingFile=None):
-        if not isinstance(sightingFile,str):
+        if (not isinstance(sightingFile,str)) or (len(sightingFile)==0):
             raise ValueError('Fix.setSightingFile: the file name violate parameter specification')
         pattern = re.compile(r'(^\w+\.xml$)')
         ifmatch = pattern.match(sightingFile)
@@ -42,20 +42,16 @@ class Fix():
             raise ValueError('Fix.setSightingFile: the file name violate parameter specification')
         now_time=self.gettime()
         self.file.write(now_time+' Start of sighting file'+sightingFile + '\n')
-        if sightingFile in self.xmlFileList:
-            return False
-        else:
-            self.xmlFileList.append(sightingFile)
-            return True
+        self.sightingFile=sightingFile
+        return sightingFile
         
 
         
     def getSightings(self):
-        if len(self.xmlFileList) == 0:
+        if self.sightingFile == '':
             raise ValueError('Fix.getSightings: no sighting file in instance')
-        xmlList=self.xmlFileList
         try:
-            dom=xml.parse(xmlList[len(xmlList)-1])
+            dom=xml.parse(self.sightingFile)
         except:
             raise ValueError('Fix.getSightings: parse xml file failed')
         sightings=dom.getElementsByTagName('sighting')
@@ -85,12 +81,14 @@ class Fix():
             ifmatch = pattern.match(datedata)
             if not ifmatch:
                 raise ValueError('Fix.getSightings: date format is incorrect')
+            self.datecheck(datedata)
             OneSighting.setDate(datedata)
             timedata = self.getText(time[0].childNodes)
             pattern=re.compile(r'(^\d\d:\d\d:\d\d$)')
             ifmatch = pattern.match(timedata)
             if not ifmatch:
                 raise ValueError('Fix.getSightings: time format is incorrect')
+            self.timecheck(timedata)
             OneSighting.setTime(timedata)
             obvdata = self.getText(obv[0].childNodes)
             angle=Angle.Angle()
@@ -138,7 +136,7 @@ class Fix():
         self.sightingList.sort(key=attrgetter('date','time','body'))
         for sighting in self.sightingList:
             self.file.write(self.gettime()+ '\t' + sighting.body + '\t' + sighting.date + '\t' + sighting.time + '\t' + sighting.adjAtl + '\n')
-        self.file.write(self.gettime() + '\t' + 'End of sighting file:' + '\t' + xmlList[len(xmlList)-1] + '\n')
+        self.file.write(self.gettime() + '\t' + 'End of sighting file:' + '\t' + self.sightingFile + '\n')
         approximateLatitude = '0d0.0'
         approximateLongitude = '0d0.0'
         return (approximateLatitude,approximateLongitude)
@@ -169,6 +167,26 @@ class Fix():
         if (deg < 0 or deg >= 90) or (dec<0.0 or dec >= 60.0):
             raise ValueError('Fix.getSightings: degree violates the limit')
         return
+    
+    def datecheck(self,date):
+        month=date[5:7]
+        if int(month)>12:
+            raise ValueError('Fix.getSightings: date value violates the specification')
+        day=date[8:10]
+        if int(day)>31:
+            raise ValueError('Fix.getSightings: date value violates the specification')
+        
+    def timecheck(self,time):
+        hour=time[:2]
+        if int(hour)>24:
+            raise ValueError('Fix.getSightings: time value violates the specification')
+        minute=time[3:5]
+        if int(minute)>60:
+            raise ValueError('Fix.getSightings: time value violates the specification')
+        second=time[6:]
+        if int(second) > 60:
+            raise ValueError('Fix.getSightings: time value violates the specification')
+        
     
 class Sighting():
     def __init__(self):
