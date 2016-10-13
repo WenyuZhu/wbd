@@ -1,0 +1,86 @@
+LOG: 2016-10-12 02:00:59-06:00 Start of log 
+LOG: 2016-10-12 02:00:59-06:00 Start of log 
+LOG: 2016-10-12 02:00:59-06:00 Start of sighting filestars.xml
+LOG: 2016-10-12 02:00:59-06:00 Start of log 
+LOG: 2016-10-12 02:00:59-06:00 Start of sighting filestars.xml
+LOG: 2016-10-12 02:00:59-06:00 Start of sighting filestars.xml
+LOG: 2016-10-12 02:00:59-06:00 Start of log 
+LOG: 2016-10-12 02:00:59-06:00 Start of log 
+LOG: 2016-10-12 02:00:59-06:00 Start of log 
+LOG: 2016-10-12 02:00:59-06:00 Start of log 
+LOG: 2016-10-12 02:00:59-06:00 Start of sighting fileoptionalmissstars.xml
+LOG: 2016-10-12 02:00:59-06:00	Aldebaran	2016-03-01	23:40:01	15d1.5
+LOG: 2016-10-12 02:00:59-06:00	Peacock	2016-03-02	00:05:05	45d11.9
+LOG: 2016-10-12 02:00:59-06:00End of sighting file:optionalmissstars.xml
+LOG: 2016-10-12 02:00:59-06:00 Start of log 
+LOG: 2016-10-12 02:00:59-06:00 Start of log 
+LOG: 2016-10-12 02:00:59-06:00 Start of sighting filenoSightingstars.xml
+LOG: 2016-10-12 02:00:59-06:00 Start of log 
+LOG: 2016-10-12 02:00:59-06:00 Start of sighting fileabsentstars.xml
+LOG: 2016-10-12 02:00:59-06:00 Start of log 
+LOG: 2016-10-12 02:00:59-06:00 Start of sighting filemandatorymissstars.xml
+LOG: 2016-10-12 02:00:59-06:00 Start of log 
+LOG: 2016-10-12 02:00:59-06:00 Start of sighting fileWrongformatstars.xml
+LOG: 2016-10-12 02:00:59-06:00 Start of log 
+LOG: 2016-10-12 02:00:59-06:00 Start of sighting filelowboundrystar.xml
+LOG: 2016-10-12 02:03:26-06:00 Start of log 
+LOG: 2016-10-12 02:03:26-06:00 Start of log 
+LOG: 2016-10-12 02:03:26-06:00 Start of sighting filestars.xml
+LOG: 2016-10-12 02:03:26-06:00 Start of log 
+LOG: 2016-10-12 02:03:26-06:00 Start of sighting filestars.xml
+LOG: 2016-10-12 02:03:26-06:00 Start of sighting filestars.xml
+LOG: 2016-10-12 02:03:26-06:00 Start of log 
+LOG: 2016-10-12 02:03:26-06:00 Start of log 
+LOG: 2016-10-12 02:03:26-06:00 Start of log 
+LOG: 2016-10-12 02:03:26-06:00 Start of log 
+LOG: 2016-10-12 02:03:26-06:00 Start of sighting fileoptionalmissstars.xml
+LOG: 2016-10-12 02:03:26-06:00	Aldebaran	2016-03-01	23:40:01	15d1.5
+LOG: 2016-10-12 02:03:26-06:00	Peacock	2016-03-02	00:05:05	45d11.9
+LOG: 2016-10-12 02:03:26-06:00End of sighting file:optionalmissstars.xml
+LOG: 2016-10-12 02:03:26-06:00 Start of log 
+LOG: 2016-10-12 02:03:26-06:00 Start of sighting filestars.xml
+LOG: 2016-10-12 02:03:26-06:00	Aldebaran	2016-03-01	23:40:01	15d1.5
+LOG: 2016-10-12 02:03:26-06:00	Peacock	2016-03-02	00:05:05	45d11.9
+LOG: 2016-10-12 02:03:26-06:00End of sighting file:stars.xml
+LOG: 2016-10-12 02:03:26-06:00 Start of log 
+LOG: 2016-10-12 02:03:26-06:00 Start of log 
+LOG: 2016-10-12 02:03:26-06:00 Start of sighting filenoSightingstars.xml
+LOG: 2016-10-12 02:03:26-06:00 Start of log 
+LOG: 2016-10-12 02:03:26-06:00 Start of sighting fileabsentstars.xml
+LOG: 2016-10-12 02:03:26-06:00 Start of log 
+LOG: 2016-10-12 02:03:26-06:00 Start of sighting filemandatorymissstars.xml
+LOG: 2016-10-12 02:03:26-06:00 Start of log 
+LOG: 2016-10-12 02:03:26-06:00 Start of sighting fileWrongformatstars.xml
+LOG: 2016-10-12 02:03:26-06:00 Start of log 
+LOG: 2016-10-12 02:03:26-06:00 Start of sighting filelowboundrystar.xml
+LOG: 2016-10-12 02:10:11-06:00 Start of log 
+LOG: 2016-10-12 02:10:11-06:00 Start of log 
+LOG: 2016-10-12 02:10:11-06:00 Start of sighting filestars.xml
+LOG: 2016-10-12 02:10:11-06:00 Start of log 
+LOG: 2016-10-12 02:10:11-06:00 Start of sighting filestars.xml
+LOG: 2016-10-12 02:10:11-06:00 Start of sighting filestars.xml
+LOG: 2016-10-12 02:10:11-06:00 Start of log 
+LOG: 2016-10-12 02:10:11-06:00 Start of log 
+LOG: 2016-10-12 02:10:11-06:00 Start of log 
+LOG: 2016-10-12 02:10:11-06:00 Start of log 
+LOG: 2016-10-12 02:10:11-06:00 Start of sighting fileoptionalmissstars.xml
+LOG: 2016-10-12 02:10:11-06:00	Aldebaran	2016-03-01	23:40:01	15d1.5
+LOG: 2016-10-12 02:10:11-06:00	Peacock	2016-03-02	00:05:05	45d11.9
+LOG: 2016-10-12 02:10:11-06:00	End of sighting file:	optionalmissstars.xml
+LOG: 2016-10-12 02:10:11-06:00 Start of log 
+LOG: 2016-10-12 02:10:11-06:00 Start of sighting filestars.xml
+LOG: 2016-10-12 02:10:11-06:00	Vinny	2016-03-01	02:00:05	15d37.5
+LOG: 2016-10-12 02:10:11-06:00	Aldebaran	2016-03-01	23:40:01	15d1.5
+LOG: 2016-10-12 02:10:11-06:00	Peacock	2016-03-02	00:05:05	45d11.9
+LOG: 2016-10-12 02:10:11-06:00	End of sighting file:	stars.xml
+LOG: 2016-10-12 02:10:11-06:00 Start of log 
+LOG: 2016-10-12 02:10:11-06:00 Start of log 
+LOG: 2016-10-12 02:10:11-06:00 Start of sighting filenoSightingstars.xml
+LOG: 2016-10-12 02:10:11-06:00 Start of log 
+LOG: 2016-10-12 02:10:11-06:00 Start of sighting fileabsentstars.xml
+LOG: 2016-10-12 02:10:11-06:00 Start of log 
+LOG: 2016-10-12 02:10:11-06:00 Start of sighting filemandatorymissstars.xml
+LOG: 2016-10-12 02:10:11-06:00 Start of log 
+LOG: 2016-10-12 02:10:11-06:00 Start of sighting fileWrongformatstars.xml
+LOG: 2016-10-12 02:10:11-06:00 Start of log 
+LOG: 2016-10-12 02:10:11-06:00 Start of sighting filelowboundrystar.xml
