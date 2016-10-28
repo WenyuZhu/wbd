@@ -16,17 +16,17 @@ class Fix():
     '''
 
 
-    def __init__(self, logFile='log'):
+    def __init__(self, logFile='log.txt'):
         '''
         Constructor
         '''
         if (not isinstance(logFile, str)) or len(logFile)==0:
-            raise ValueError('Fix._init_: input has to be string')
-        name=logFile+'.txt'
+            raise ValueError('Fix.__init__: input has to be string')
+        name=logFile
         try:
             file=open(name,'a')
         except:
-            raise ValueError('Fix._init_: log file can not be created or appended')
+            raise ValueError('Fix.__init__: log file can not be created or appended')
         now_time=self.gettime()
         file.write(now_time+' Start of log \n')
         self.file=file
@@ -36,12 +36,15 @@ class Fix():
     def setSightingFile(self, sightingFile=None):
         if (not isinstance(sightingFile,str)) or (len(sightingFile)==0):
             raise ValueError('Fix.setSightingFile: the file name violate parameter specification')
-        pattern = re.compile(r'(^\w+\.xml$)')
+        try:
+            pattern = re.compile(r'(^\w+\.xml$)')
+        except:
+            raise ValueError('Fix.setSightingFile: log file can not be created or appended')
         ifmatch = pattern.match(sightingFile)
         if not ifmatch:
             raise ValueError('Fix.setSightingFile: the file name violate parameter specification')
         now_time=self.gettime()
-        self.file.write(now_time+' Start of sighting file'+sightingFile + '\n')
+        self.file.write(now_time+' Start of sighting file '+sightingFile + '\n')
         self.sightingFile=sightingFile
         return sightingFile
         
