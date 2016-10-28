@@ -9,6 +9,7 @@ import Navigation.prod.Angle as Angle
 import math
 import time
 from _operator import attrgetter
+import os
 
 class Fix():
     '''
@@ -28,10 +29,13 @@ class Fix():
         except:
             raise ValueError('Fix.__init__: log file can not be created or appended')
         now_time=self.gettime()
-        file.write(now_time+' Start of log \n')
-        self.file=file
+        file.write(now_time+' Log file:'+'\t'+os.path.abspath(name)+'\n')
+        file.close()
+        logFile=None
+        self.name=name
         self.sightingFile=''
         self.sightingList=list()
+        
             
     def setSightingFile(self, sightingFile=None):
         if (not isinstance(sightingFile,str)) or (len(sightingFile)==0):
@@ -44,9 +48,11 @@ class Fix():
         if not ifmatch:
             raise ValueError('Fix.setSightingFile: the file name violate parameter specification')
         now_time=self.gettime()
-        self.file.write(now_time+' Start of sighting file '+sightingFile + '\n')
+        file=open(self.name,'a')
+        file.write(now_time+' Sighting file:'+'\t'+os.path.abspath(sightingFile)+'\n')
+        file.close()
         self.sightingFile=sightingFile
-        return sightingFile
+        return os.path.abspath(sightingFile)
         
 
         
@@ -104,7 +110,10 @@ class Fix():
             obvdatarad=obvdata*math.pi/180
             if not (len(height) == 0 or self.getText(height[0].childNodes)==''):
                 heightdata=self.getText(height[0].childNodes)
-                heightdata=float(heightdata)
+                try:
+                    heightdata=float(heightdata)
+                except:
+                    raise ValueError('Fix.getSightings: height has to be greater than or equal to 0')
                 if heightdata < 0:
                     raise ValueError('Fix.getSightings: height has to be greater than or equal to 0')
                 OneSighting.setheight(heightdata)
@@ -116,7 +125,11 @@ class Fix():
                 OneSighting.setTemt(temtdata)
             if not (len(pres) == 0 or self.getText(pres[0].childNodes)==''):  
                 presdata = self.getText(pres[0].childNodes)
-                presdata = int(presdata)
+                try:
+                    presdata = int(presdata)
+                except:
+                    raise ValueError('Fix.getSightings: pressure has to be integer')
+                
                 if presdata < 100 or presdata > 1100:
                     raise ValueError('Fix.getSightings: pressure has to be greater than or equal to 100 or less than or equal to 1100')
                 OneSighting.setPres(presdata)
@@ -136,10 +149,12 @@ class Fix():
             adjAlt=angle.getString()
             OneSighting.setAdjAtl(adjAlt)
             self.sightingList.append(OneSighting)
+        file=open(self.name,'a')
         self.sightingList.sort(key=attrgetter('date','time','body'))
         for sighting in self.sightingList:
-            self.file.write(self.gettime()+ '\t' + sighting.body + '\t' + sighting.date + '\t' + sighting.time + '\t' + sighting.adjAtl + '\n')
-        self.file.write(self.gettime() + '\t' + 'End of sighting file:' + '\t' + self.sightingFile + '\n')
+            file.write(self.gettime()+ '\t' + sighting.body + '\t' + sighting.date + '\t' + sighting.time + '\t' + sighting.adjAtl + '\n')
+        file.write(self.gettime() + '\t' + 'End of sighting file:' + '\t' + self.sightingFile + '\n')
+        file.close()
         approximateLatitude = '0d0.0'
         approximateLongitude = '0d0.0'
         return (approximateLatitude,approximateLongitude)
