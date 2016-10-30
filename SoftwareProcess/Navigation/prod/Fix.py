@@ -34,26 +34,65 @@ class Fix():
         logFile=None
         self.name=name
         self.sightingFile=''
+        self.ariesFile=''
+        self.starFile=''
         self.sightingList=list()
         
             
     def setSightingFile(self, sightingFile=None):
         if (not isinstance(sightingFile,str)) or (len(sightingFile)==0):
             raise ValueError('Fix.setSightingFile: the file name violate parameter specification')
-        try:
-            pattern = re.compile(r'(^\w+\.xml$)')
-        except:
-            raise ValueError('Fix.setSightingFile: log file can not be created or appended')
+        pattern = re.compile(r'(^\w+\.xml$)')
         ifmatch = pattern.match(sightingFile)
         if not ifmatch:
             raise ValueError('Fix.setSightingFile: the file name violate parameter specification')
+        FilePath=os.path.abspath(sightingFile)
         now_time=self.gettime()
-        file=open(self.name,'a')
-        file.write(now_time+' Sighting file:'+'\t'+os.path.abspath(sightingFile)+'\n')
-        file.close()
+        logFile=open(self.name,'a')
+        logFile.write(now_time+' Sighting file:'+'\t'+FilePath+'\n')
+        logFile.close()
         self.sightingFile=sightingFile
-        return os.path.abspath(sightingFile)
+        return FilePath
         
+    def setAriesFile(self,ariesFile=None):
+        if (not isinstance(ariesFile, str)) or len(ariesFile)==0:
+            raise ValueError('Fix.setAriesFile: the file name violate parameter specification')
+        pattern = re.compile(r'(^\w+\.txt$)')
+        ifmatch = pattern.match(ariesFile)
+        if not ifmatch:
+            raise ValueError('Fix.setAriesFile: the file name violate parameter specification')
+        try:
+            file=open(ariesFile,'r')
+        except:
+            raise ValueError('Fix.setAriesFile: the aries file doesnt exist')
+        file.close()
+        FilePath=os.path.abspath(ariesFile)
+        now_time=self.gettime()
+        logFile=open(self.name,'a')
+        logFile.write(now_time+' Aries file:'+'\t'+FilePath+'\n')
+        logFile.close()
+        self.ariesFile=ariesFile
+        return FilePath 
+    
+    def setStarFile(self,starFile=None):
+        if (not isinstance(starFile, str)) or len(starFile)==0:
+            raise ValueError('Fix.setStarFile: the file name violate parameter specification')
+        pattern = re.compile(r'(^\w+\.txt$)')
+        ifmatch = pattern.match(starFile)
+        if not ifmatch:
+            raise ValueError('Fix.setStarFile: the file name violate parameter specification')
+        try:
+            file=open(starFile,'r')
+        except:
+            raise ValueError('Fix.setStarFile: the aries file doesnt exist')
+        file.close()
+        FilePath=os.path.abspath(starFile)
+        now_time=self.gettime()
+        logFile=open(self.name,'a')
+        logFile.write(now_time+' Star file:'+'\t'+FilePath+'\n')
+        logFile.close()
+        self.starFile=starFile
+        return FilePath 
 
         
     def getSightings(self):
