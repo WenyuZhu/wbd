@@ -80,7 +80,6 @@ class TestFix(unittest.TestCase):
     def test100_040_ShouldConstructFixWithExistingFile(self):
         theFix = F.Fix(self.RANDOM_LOG_FILE)
         theFix = F.Fix(self.RANDOM_LOG_FILE)
-        print(self.RANDOM_LOG_FILE)
         try:
             theLogFile = open(self.RANDOM_LOG_FILE, 'r')
             numberOfExpectedEntries = 2
@@ -88,7 +87,6 @@ class TestFix(unittest.TestCase):
                 entry = theLogFile.readline()
                 self.assertNotEquals(-1, entry.find(self.logStartString), 
                                      "Minor:  first line of log is incorrect")
-            del theLogFile
         except IOError:
             self.fail()
         self.assertIsInstance(theFix, F.Fix, 

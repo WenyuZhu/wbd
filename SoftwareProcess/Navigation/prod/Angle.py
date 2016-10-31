@@ -130,7 +130,6 @@ class Angle():
         num = int(anglenum / 1)
         dec = anglenum - num
         dec = dec * 60
-        dec = round(dec,1)
         res = str(num) + 'd' + str(dec)
         return res
         pass
