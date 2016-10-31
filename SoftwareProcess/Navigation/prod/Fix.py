@@ -148,6 +148,14 @@ class Fix():
             self.sightingList.append(OneSighting)
         logFile=open()
         self.sightingList.sort(key=attrgetter('date','time','body'))
+<<<<<<< HEAD
+=======
+        #Start calculating latitude and longitude
+        self.getLatitudeAndSHA(starFile)
+        self.getGHA(ariesFile)
+        self.getLongitude()
+        
+>>>>>>> refs/heads/CA03
         for sighting in self.sightingList:
             logFile.write(self.gettime()+ '\t' + sighting.body + '\t' + sighting.date + '\t' + sighting.time + '\t' + sighting.adjAtl + '\n')
         
