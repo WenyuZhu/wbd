@@ -1,0 +1,4 @@
+LOG: 2016-10-30 23:25:50-06:00 Log file:	F:\Document\AU\Software Process\CA1\SoftwareProcess\Navigation\test\log4d3582ce77c6.txt
+LOG: 2016-10-30 23:25:50-06:00 Sighting file:	F:\Document\AU\Software Process\CA1\SoftwareProcess\Navigation\test\CA03_500_ValidMultipleStarSighting.xml
+LOG: 2016-10-30 23:25:50-06:00 Aries file:	F:\Document\AU\Software Process\CA1\SoftwareProcess\Navigation\test\aries.txt
+LOG: 2016-10-30 23:25:50-06:00 Star file:	F:\Document\AU\Software Process\CA1\SoftwareProcess\Navigation\test\stars.txt

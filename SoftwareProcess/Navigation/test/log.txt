@@ -1,2 +1,5 @@
-LOG: 2016-10-28 13:55:55-06:00 Start of log 
-LOG: 2016-10-28 13:55:55-06:00 Start of sighting file CA02_300_InvalidHorizon.xml
+LOG: 2016-10-30 22:14:30-06:00 Log file:	F:\Document\AU\Software Process\CA1\SoftwareProcess\Navigation\test\log.txt
+LOG: 2016-10-30 22:14:30-06:00 Sighting file:	F:\Document\AU\Software Process\CA1\SoftwareProcess\Navigation\test\CA02_300_InvalidHorizon.xml
+LOG: 2016-10-30 22:14:30-06:00 Aries file:	F:\Document\AU\Software Process\CA1\SoftwareProcess\Navigation\test\aries.txt
+LOG: 2016-10-30 22:14:30-06:00 Star file:	F:\Document\AU\Software Process\CA1\SoftwareProcess\Navigation\test\stars.txt
+LOG: 2016-10-30 22:14:30-06:00	Sighting errors:	1
