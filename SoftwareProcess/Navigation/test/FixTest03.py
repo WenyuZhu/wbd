@@ -222,10 +222,235 @@ class Test(unittest.TestCase):
         theLogFile.close()
         os.remove(self.DEFAULT_LOG_FILE)
         
+# 500 getSightings
+#    Analysis
+#        inputs:
+#            via parm:  none
+#            via file:  xml description of sighting, two txt of aries and stars
+#        outputs:
+#            returns:    ("0d0.0", "0d0.0")
+#            via file:    writes valid body /t date /t time /t adjusted altitude /t geographic position latitude /t geographic position longitude in sorted order
+#        entry criterion:
+#            setSightingsFile, setAriesFile and set StarFile must be called first
+#
+#    Happy tests:
+#        sighting file 
+#            valid file with any sightings, aries and stars -> should return ("0d0.0", "0d0.0")
+#        sighting file contents
+#            valid file with several invalid elements -> report the number of invalid sighting
+#            valid file with valid bodies -> geographic position latitude and geographic position longitude following previous content
+#    Sad tests:
+#        sightingFile:
+#            sighting file not previously set
+#            aries file not previously set
+#            star file not previously set
+
+    def test500_910_ShouldRaiseExceptionOnNotSettingAriesFile(self):
+        expectedDiag = self.className + "getSightings:"
+        theFix = F.Fix()
+        theFix.setSightingFile('CA02_300_ValidOneStarWithDefaultValues.xml')
+        with self.assertRaises(ValueError) as context:
+            theFix.getSightings()
+        self.assertEquals(expectedDiag, context.exception.args[0][0:len(expectedDiag)])
+        os.remove(self.DEFAULT_LOG_FILE)
         
+    def test500_920_ShouldRaiseExceptionOnNotSettingAriesFile(self):
+        expectedDiag = self.className + "getSightings:"
+        theFix = F.Fix()
+        theFix.setSightingFile('CA02_300_ValidOneStarWithDefaultValues.xml')
+        theFix.setAriesFile('aries.txt')
+        with self.assertRaises(ValueError) as context:
+            theFix.getSightings()
+        self.assertEquals(expectedDiag, context.exception.args[0][0:len(expectedDiag)])
+        os.remove(self.DEFAULT_LOG_FILE)
+        
+    def test500_930_ShouldRaiseExceptionOnMissingMandatoryTag(self):
+        theFix = F.Fix()
+        theFix.setSightingFile("CA02_300_InvalidWithMissingMandatoryTags.xml")
+        theFix.setAriesFile('aries.txt')
+        theFix.setStarFile('stars.txt')
+        theFix.getSightings()
+        theLogFile = open(self.DEFAULT_LOG_FILE, "r")
+        logFileContents = theLogFile.readlines()
+        theLogFile.close()
+        self.assertNotEquals(-1,logFileContents[-1].find('Sighting errors:'+'\t'+'1'))
+        os.remove(self.DEFAULT_LOG_FILE)
+        
+    def test500_940_ShouldRaiseExceptionOnInvalidBody(self):
+        theFix = F.Fix()
+        theFix.setSightingFile("CA02_300_InvalidBody.xml")
+        theFix.setAriesFile('aries.txt')
+        theFix.setStarFile('stars.txt')
+        theFix.getSightings()
+        theLogFile = open(self.DEFAULT_LOG_FILE, "r")
+        logFileContents = theLogFile.readlines()
+        theLogFile.close()
+        self.assertNotEquals(-1,logFileContents[-1].find('Sighting errors:'+'\t'+'1'))
+        os.remove(self.DEFAULT_LOG_FILE)
+        
+    def test500_950_ShouldRaiseExceptionOnInvalidDate(self):
+        theFix = F.Fix()
+        theFix.setSightingFile("CA02_300_InvalidDate.xml")
+        theFix.setAriesFile('aries.txt')
+        theFix.setStarFile('stars.txt')
+        theFix.getSightings()
+        theLogFile = open(self.DEFAULT_LOG_FILE, "r")
+        logFileContents = theLogFile.readlines()
+        theLogFile.close()
+        self.assertNotEquals(-1,logFileContents[-1].find('Sighting errors:'+'\t'+'1'))
+        os.remove(self.DEFAULT_LOG_FILE)
+        
+    def test500_960_ShouldRaiseExceptionOnInvalidTime(self):
+        theFix = F.Fix()
+        theFix.setSightingFile("CA02_300_InvalidTime.xml")
+        theFix.setAriesFile('aries.txt')
+        theFix.setStarFile('stars.txt')
+        theFix.getSightings()
+        theLogFile = open(self.DEFAULT_LOG_FILE, "r")
+        logFileContents = theLogFile.readlines()
+        theLogFile.close()
+        self.assertNotEquals(-1,logFileContents[-1].find('Sighting errors:'+'\t'+'1'))
+        os.remove(self.DEFAULT_LOG_FILE)
 
-
+    def test500_970_ShouldRaiseExceptionOnInvalidObservation(self):
+        theFix = F.Fix()
+        theFix.setSightingFile("CA02_300_InvalidObservation.xml")
+        theFix.setAriesFile('aries.txt')
+        theFix.setStarFile('stars.txt')
+        theFix.getSightings()
+        theLogFile = open(self.DEFAULT_LOG_FILE, "r")
+        logFileContents = theLogFile.readlines()
+        theLogFile.close()
+        self.assertNotEquals(-1,logFileContents[-1].find('Sighting errors:'+'\t'+'1'))
+        os.remove(self.DEFAULT_LOG_FILE)
+        
+    def test500_980_ShouldRaiseExceptionOnInvalidHeight(self):
+        theFix = F.Fix()
+        theFix.setSightingFile("CA02_300_InvalidHeight.xml")
+        theFix.setAriesFile('aries.txt')
+        theFix.setStarFile('stars.txt')
+        theFix.getSightings()
+        theLogFile = open(self.DEFAULT_LOG_FILE, "r")
+        logFileContents = theLogFile.readlines()
+        theLogFile.close()
+        self.assertNotEquals(-1,logFileContents[-1].find('Sighting errors:'+'\t'+'1'))
+        os.remove(self.DEFAULT_LOG_FILE)
+        
+    def test500_990_ShouldRaiseExceptionOnInvalidTemperature(self):
+        theFix = F.Fix()
+        theFix.setSightingFile("CA02_300_InvalidTemperature.xml")
+        theFix.setAriesFile('aries.txt')
+        theFix.setStarFile('stars.txt')
+        theFix.getSightings()
+        theLogFile = open(self.DEFAULT_LOG_FILE, "r")
+        logFileContents = theLogFile.readlines()
+        theLogFile.close()
+        self.assertNotEquals(-1,logFileContents[-1].find('Sighting errors:'+'\t'+'1'))
+        os.remove(self.DEFAULT_LOG_FILE)
+        
+    def test500_991_ShouldRaiseExceptionOnInvalidPressure(self):
+        theFix = F.Fix()
+        theFix.setSightingFile("CA02_300_InvalidPressure.xml")
+        theFix.setAriesFile('aries.txt')
+        theFix.setStarFile('stars.txt')
+        theFix.getSightings()
+        theLogFile = open(self.DEFAULT_LOG_FILE, "r")
+        logFileContents = theLogFile.readlines()
+        theLogFile.close()
+        self.assertNotEquals(-1,logFileContents[-1].find('Sighting errors:'+'\t'+'1'))
+        os.remove(self.DEFAULT_LOG_FILE)
+        
+    def test500_992_ShouldRaiseExceptionOnInvalidHorizon(self):
+        theFix = F.Fix()
+        theFix.setSightingFile("CA02_300_InvalidHorizon.xml")
+        theFix.setAriesFile('aries.txt')
+        theFix.setStarFile('stars.txt')
+        theFix.getSightings()
+        theLogFile = open(self.DEFAULT_LOG_FILE, "r")
+        logFileContents = theLogFile.readlines()
+        theLogFile.close()
+        self.assertNotEquals(-1,logFileContents[-1].find('Sighting errors:'+'\t'+'1'))
+#         os.remove(self.DEFAULT_LOG_FILE)
+        
+    def test500_010_ShouldLogMultipleSightingsWithSameDateTime(self):       
+        targetStringList = [
+            ["Acrux", "2016-03-01", "00:05:05"],
+            ["Sirius", "2016-03-01", "00:05:05"],
+            ["Canopus", "2016-03-02", "23:40:01"]
+            ]
+        theFix = F.Fix(self.RANDOM_LOG_FILE)
+        theFix.setSightingFile("CA02_300_ValidMultipleStarSightingSameDateTime.xml")
+        theFix.setAriesFile('aries.txt')
+        theFix.setStarFile('stars.txt')
+        theFix.getSightings()
+         
+        theLogFile = open(self.RANDOM_LOG_FILE, "r")
+        logFileContents = theLogFile.readlines()
+        theLogFile.close()
+         
+        # find entry with first star
+        entryIndex = self.indexInList(targetStringList[0][0], logFileContents)
+        self.assertLess(-1, entryIndex, 
+                           "failure to find " + targetStringList[0][0] +  " in log")
+        for index in range(entryIndex+1, len(targetStringList)):
+            entryIndex += 1
+            if(not(targetStringList[index][0] in logFileContents[entryIndex])):
+                self.fail("failure to find star in log")
+        self.cleanup()   
+        
+    def test500_020_ShouldLogMultipleSightingsWithInvalidAngleInAriesFile(self):
+        theFix = F.Fix(self.RANDOM_LOG_FILE)
+        theFix.setSightingFile("CA02_300_ValidMultipleStarSightingSameDateTime.xml")
+        theFix.setAriesFile('arieswithwrongangle.txt')
+        theFix.setStarFile('stars.txt')
+        theFix.getSightings()
+         
+        theLogFile = open(self.RANDOM_LOG_FILE, "r")
+        logFileContents = theLogFile.readlines()
+        theLogFile.close()
+         
+        # find entry with first star
+        self.assertNotEquals(-1,logFileContents[-1].find('Sighting errors:'+'\t'+'2'))
+        self.cleanup()  
+        
+    def test500_030_ShouldLogMultipleSightingsWithInvalidAngleInStarFile(self):
+        theFix = F.Fix(self.RANDOM_LOG_FILE)
+        theFix.setSightingFile("CA02_300_ValidMultipleStarSightingSameDateTime.xml")
+        theFix.setAriesFile('aries.txt')
+        theFix.setStarFile('starswithwrongangle.txt')
+        theFix.getSightings()
+         
+        theLogFile = open(self.RANDOM_LOG_FILE, "r")
+        logFileContents = theLogFile.readlines()
+        theLogFile.close()
+         
+        # find entry with first star
+        self.assertNotEquals(-1,logFileContents[-1].find('Sighting errors:'+'\t'+'1'))
+        self.cleanup()  
+        
+        
+    def test500_040_ShouldLogMultipleSightingsWithValidAngle(self):
+        theFix = F.Fix(self.RANDOM_LOG_FILE)
+        theFix.setSightingFile("CA03_500_ValidMultipleStarSighting.xml")
+        theFix.setAriesFile('aries.txt')
+        theFix.setStarFile('stars.txt')
+        theFix.getSightings()
+         
+        theLogFile = open(self.RANDOM_LOG_FILE, "r")
+        logFileContents = theLogFile.readlines()
+        theLogFile.close()
+         
+        # find entry with first star
+        self.assertNotEquals(-1,logFileContents[-1].find('Sighting errors:'+'\t'+'0'))
+        self.cleanup() 
+        
 #  helper methods
     def cleanup(self):
         if(os.path.isfile(self.RANDOM_LOG_FILE)):
             os.remove(self.RANDOM_LOG_FILE)  
+            
+    def indexInList(self, target, searchList):
+        for index in range(len(searchList)):
+            if(target in searchList[index]):
+                return index
+        return -1

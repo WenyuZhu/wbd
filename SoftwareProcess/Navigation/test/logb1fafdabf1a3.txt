@@ -1,0 +1,2 @@
+LOG: 2016-10-30 13:39:29-06:00 Log file:	F:\Document\AU\Software Process\CA1\SoftwareProcess\Navigation\test\logb1fafdabf1a3.txt
+LOG: 2016-10-30 13:39:29-06:00 Sighting file:	F:\Document\AU\Software Process\CA1\SoftwareProcess\Navigation\test\CA02_300_ValidMultipleStarSighting.xml
