@@ -219,6 +219,7 @@ class Fix():
             self.sightingList.append(OneSighting)
         file=open(self.name,'a')
         self.sightingList.sort(key=attrgetter('date','time','body'))
+        #Start calculating latitude and longitude
         self.getLatitudeAndSHA(starFile)
         self.getGHA(ariesFile)
         self.getLongitude()
