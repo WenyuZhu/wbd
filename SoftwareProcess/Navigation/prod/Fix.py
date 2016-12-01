@@ -95,7 +95,22 @@ class Fix():
         return FilePath 
 
         
-    def getSightings(self):
+    def getSightings(self,assumedLatitude='0d0.0',assumedLongitude='0d0.0'):
+        if (not isinstance(assumedLatitude, str) or not isinstance(assumedLongitude, str)):
+            raise ValueError('Fix.getSightings: both assumedLatitude and assumedLongitude have to be str')
+        if assumedLatitude[0]=='S' or assumedLatitude[0]=='N':
+            checkLatitude=assumedLatitude[1:]
+            if not self.anglecheck(checkLatitude):
+                raise ValueError('Fix.getSightings: not valid Latitude')
+            if assumedLatitude[0]=='S':
+                assumedLatitude='-'+checkLatitude
+            else:
+                assumedLatitude=checkLatitude
+        else:
+            if not assumedLatitude=='0d0.0':
+                raise ValueError('Fix.getSightings: not valid Latitude')
+        if not self.angleNewcheck(assumedLongitude):
+            raise ValueError('Fix.getSightings: not valid Longitude')
         if self.sightingFile == '':
             raise ValueError('Fix.getSightings: no sighting file in instance')
         if self.ariesFile == '':
@@ -223,15 +238,28 @@ class Fix():
         self.getLatitudeAndSHA(starFile)
         self.getGHA(ariesFile)
         self.getLongitude()
+        self.getLHA(assumedLongitude)
+        self.getCorrectAltitude(assumedLatitude)
+        self.getDistanceAdj()
+        self.getAzimuthAdj(assumedLatitude)
+        
         
         for sighting in self.sightingList:
             if sighting.valid==True:
-                file.write(self.gettime()+ '\t' + sighting.body + '\t' + sighting.date + '\t' + sighting.time + '\t' + sighting.adjAtl + '\t' + sighting.latitude + '\t' +sighting.longitude + '\n')
+                file.write(self.gettime()+ '\t' + sighting.body + '\t' + sighting.date + '\t' + sighting.time + '\t' + sighting.adjAtl + '\t' + sighting.latitude + '\t' +sighting.longitude + '\t'+ assumedLatitude + '\t'+ assumedLongitude + '\t' + sighting.azi + '\t' + sighting.disAl + '\n')
+        approxLa=self.getAppLa(assumedLatitude)
+        approxLo=self.getAppLo(assumedLongitude)
+        
+        if approxLa[0]=='-':
+            approxLa='S'+approxLa[1:]
+        else:
+            approxLa='N'+approxLa
         
         file.write(self.gettime() + '\t' + 'Sighting errors:' + '\t' + str(self.errorNumber) + '\n')
+        file.write(self.gettime() + '\t' + 'Approximate latitude:' + '\t' + approxLa+ '\t' + 'Approximate Longitude:' + '\t' + approxLo + '\n')
         file.close()
-        approximateLatitude = '0d0.0'
-        approximateLongitude = '0d0.0'
+        approximateLatitude = approxLa
+        approximateLongitude = approxLo
         return (approximateLatitude,approximateLongitude)
     
     def gettime(self):
@@ -320,6 +348,19 @@ class Fix():
         if int(second) > 60:
             return False
         return True
+    
+    def transform(self,degree):
+        for index in range(len(degree)):
+            if degree[index]=='d':
+                break
+        deg=int(degree[:index])
+        dec=float(degree[index+1:])
+        dec=dec/60
+        if deg < 0:
+            deg = deg - dec
+        else:
+            deg = deg + dec
+        return deg
         
     def getLatitudeAndSHA(self,starFile):
         starFileContent=starFile.readlines()
@@ -424,7 +465,103 @@ class Fix():
                 angleLongi.setDegrees(longi)
                 longi=angleLongi.getString()
                 sighting.longitude=longi
-            
+                
+    def getLHA(self,assumedLongitude):
+        for sighting in self.sightingList:
+            if sighting.valid == True:
+                angleLo=Angle.Angle()
+                asLo=angleLo.setDegreesAndMinutes(assumedLongitude)
+                Lo=angleLo.setDegreesAndMinutes(sighting.longitude)
+                LHA=Lo+asLo
+                sighting.LHA=LHA
+                
+    def getCorrectAltitude(self,assumedLatitude):
+        for sighting in self.sightingList:
+            if sighting.valid == True:
+                angleLa=Angle.Angle()
+                La=angleLa.setDegreesAndMinutes(sighting.latitude)
+                La=La*math.pi/180
+                asLa=angleLa.setDegreesAndMinutes(assumedLatitude)
+                asLa=asLa*math.pi/180
+                sinLa=math.sin(La)*math.sin(asLa)
+                cosLa=math.cos(La)*math.cos(asLa)*math.cos(sighting.LHA*math.pi/180)
+                coral=math.asin(sinLa+cosLa)
+                coral=coral*180/math.pi
+                sighting.coral=coral
+                sighting.interdis=sinLa+cosLa
+                
+                
+    def getDistanceAdj(self):
+        for sighting in self.sightingList:
+            if sighting.valid == True:
+                angleAl=Angle.Angle()
+                adjAl=angleAl.setDegreesAndMinutes(sighting.adjAtl)
+                corAl=sighting.coral
+                disAl=corAl-adjAl
+                disAl=round(disAl*60,0)
+                disAl=int(disAl)
+                sighting.disAl=str(disAl)
+                
+    def getAzimuthAdj(self, assumedLatitude):
+        for sighting in self.sightingList:
+            if sighting.valid == True:
+                angleLa=Angle.Angle()
+                La=angleLa.setDegreesAndMinutes(sighting.latitude)
+                La=La*math.pi/180
+                asLa=angleLa.setDegreesAndMinutes(assumedLatitude)
+                asLa=asLa*math.pi/180
+                corAl=sighting.coral
+                corAl=corAl*math.pi/180
+                interDis=sighting.interdis
+                sinLa=math.sin(La)-math.sin(asLa)*interDis
+                cosLa=math.cos(asLa)*math.cos(corAl)
+                aziAdj=math.acos(sinLa/cosLa)
+                aziAdj=aziAdj*180/math.pi
+                angleLa.setDegrees(aziAdj)
+                aziStr=angleLa.getString()
+                sighting.azi=aziStr
+                
+    def getAppLa(self,assumedLatitude):
+        tempSum=0
+        angleLa=Angle.Angle()
+        asLa=self.transform(assumedLatitude)
+        for sighting in self.sightingList:
+            if sighting.valid == True:
+                disAl=int(sighting.disAl)
+                azi=angleLa.setDegreesAndMinutes(sighting.azi)
+                azi=azi*math.pi/180
+                tempSum=tempSum+disAl*math.cos(azi)
+        asLa=tempSum/60+asLa
+        if asLa<0:
+            dec=asLa%-1
+            dec=-dec
+        else:
+            dec=asLa%1
+        dec=dec*60
+        dec=round(dec,1)
+        degree=int(asLa)
+        if dec<10:
+            dec='0'+str(dec)
+        else:
+            dec=str(dec)
+        approxLa=str(degree)+'d'+dec
+        return approxLa
+    
+    def getAppLo(self,assumedLongitude):
+        tempSum=0
+        angleLo=Angle.Angle()
+        asLo=angleLo.setDegreesAndMinutes(assumedLongitude)
+        for sighting in self.sightingList:
+            if sighting.valid == True:
+                disAl=int(sighting.disAl)
+                azi=angleLo.setDegreesAndMinutes(sighting.azi)
+                azi=azi*math.pi/180
+                tempSum=tempSum+disAl*math.sin(azi)
+        asLo=(tempSum/60)+asLo
+        angleLo.setDegrees(asLo)
+        approxLo=angleLo.getString()
+        return approxLo
+    
 class Sighting():
     def __init__(self):
         self.body=''
@@ -440,6 +577,12 @@ class Sighting():
         self.GHA=''
         self.longitude=''
         self.valid=True
+        self.LHA=0
+        self.coral=0
+        self.disAl=''
+        self.azi=''
+        self.interdis=0
+        
     def setBody(self,body):
         self.body=body
         return

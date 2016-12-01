@@ -1,0 +1,6 @@
+LOG: 2016-11-23 21:06:23-06:00 Log file:	F:\Document\AU\Software Process\CA1\SoftwareProcess\Navigation\test\log6edc15a9c4ac.txt
+LOG: 2016-11-23 21:06:23-06:00 Sighting file:	F:\Document\AU\Software Process\CA1\SoftwareProcess\Navigation\test\Fix05Test.xml
+LOG: 2016-11-23 21:06:23-06:00 Aries file:	F:\Document\AU\Software Process\CA1\SoftwareProcess\Navigation\test\CA03_Valid_Aries.txt
+LOG: 2016-11-23 21:06:23-06:00 Star file:	F:\Document\AU\Software Process\CA1\SoftwareProcess\Navigation\test\CA03_Valid_Stars.txt
+LOG: 2016-11-23 21:06:23-06:00	Sighting errors:	2
+LOG: 2016-11-23 21:06:23-06:00	Approximate latitude:	N27d59.5	Approximate Longitude:	85d33.4

@@ -1,0 +1,7 @@
+LOG: 2016-11-30 11:54:27-06:00 Log file:	F:\Document\AU\Software Process\CA1\SoftwareProcess\Navigation\test\log365b8d0b5ba1.txt
+LOG: 2016-11-30 11:54:27-06:00 Sighting file:	F:\Document\AU\Software Process\CA1\SoftwareProcess\Navigation\test\Fix05Test.xml
+LOG: 2016-11-30 11:54:27-06:00 Aries file:	F:\Document\AU\Software Process\CA1\SoftwareProcess\Navigation\test\CA03_Valid_Aries.txt
+LOG: 2016-11-30 11:54:27-06:00 Star file:	F:\Document\AU\Software Process\CA1\SoftwareProcess\Navigation\test\CA03_Valid_Stars.txt
+LOG: 2016-11-30 11:54:27-06:00	Pollux	2017-04-17	23:50:14	15d1.5	27d59.1	87d30.8	N27d59.5	85d33.4	7d21.1	-2919
+LOG: 2016-11-30 11:54:27-06:00	Sighting errors:	1
+LOG: 2016-11-30 11:54:27-06:00	Approximate latitude:	S20.258403983166176	Approximate Longitude:	21d46.0

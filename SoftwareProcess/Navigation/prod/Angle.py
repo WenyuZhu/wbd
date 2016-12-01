@@ -131,7 +131,11 @@ class Angle():
         dec = anglenum - num
         dec = dec * 60
         dec = round(dec,1)
-        res = str(num) + 'd' + str(dec)
+        if dec<10:
+            dec='0'+str(dec)
+        else:
+            dec=str(dec)
+        res = str(num) + 'd' + dec
         return res
         pass
     

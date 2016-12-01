@@ -1,0 +1,5 @@
+LOG: 2016-11-30 11:51:47-06:00 Log file:	F:\Document\AU\Software Process\CA1\SoftwareProcess\Navigation\test\log103502d8e1e3.txt
+LOG: 2016-11-30 11:51:47-06:00 Sighting file:	F:\Document\AU\Software Process\CA1\SoftwareProcess\Navigation\test\Fix05Test.xml
+LOG: 2016-11-30 11:51:47-06:00 Aries file:	F:\Document\AU\Software Process\CA1\SoftwareProcess\Navigation\test\CA03_Valid_Aries.txt
+LOG: 2016-11-30 11:51:47-06:00 Star file:	F:\Document\AU\Software Process\CA1\SoftwareProcess\Navigation\test\CA03_Valid_Stars.txt
+LOG: 2016-11-30 11:51:47-06:00	Pollux	2017-04-17	23:50:14	15d1.5	27d59.1	87d30.8	N27d59.5	85d33.4	7d21.1	-2919
